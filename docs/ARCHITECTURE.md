@@ -63,7 +63,7 @@ conversation with a document that someone who never saw the chat can read and ac
 | | Exploration mode | Project mode |
 |---|---|---|
 | **Purpose** | Research and new ideas, with nothing to build yet | Take one idea far enough that the author can decide whether to build it |
-| **How it works** | A short search plan the author can cut or extend; primary sources before secondary ones; the author's own ideas first, so Claude's do not anchor them; then a wide set of ideas, some under forced constraints ("no money", "local only", "ready in a day") | It starts from the problem and what already exists; two or three approaches are weighed, with the strongest form of each rejected one stated before it goes; the work is split into areas that code can verify and areas only the author can judge, with worked examples for the first, the author's own or candidates drawn by Claude Code, each with the author's verdict; a smallest first version; only then, once it is clear what the project does, the author's own description of it and its name; a pre-mortem and the single assumption that would make the project pointless if false |
+| **How it works** | A short search plan the author can cut or extend; primary sources before secondary ones; the author's own ideas first, so Claude's do not anchor them; then a wide set of ideas, some under forced constraints ("no money", "local only", "ready in a day") | It starts from the problem and what already exists, with anything close to the idea read at its primary source; two or three approaches are weighed, with the strongest form of each rejected one stated before it goes; the work is split into areas that code can verify and areas only the author can judge, with worked examples for the first, the author's own or candidates drawn by Claude Code, each with the author's verdict; a smallest first version; only then, once it is clear what the project does, the author's own description of it and its name; a pre-mortem and the single assumption that would make the project pointless if false |
 | **Every finding gets** | A verdict: worth following, eliminated with the reason, or unverified with how to verify it | A place in the brief: decided, out of scope, a sign to watch, or open |
 | **It ends with** | An exploration file, checked against a six-point gate before delivery | An ideas brief, checked against a five-point gate, then tested in a fresh chat that sees only the document |
 
@@ -71,7 +71,9 @@ conversation with a document that someone who never saw the chat can read and ac
 
 - **A mode and a stopping condition, agreed at the start.** A conversation without a written
   "done" never closes.
-- **One question per message.** A choice is asked in plain text: first the criteria for choosing,
+- **One question per message.** Each message carries a single decision and reads on its own,
+  without scrolling back: it says what is being decided and on what. Several topics are listed
+  once, with numbers that do not change, and taken one at a time. A choice is asked in plain text: first the criteria for choosing,
   then the options, numbered, the recommended one first with its reason; the author answers with
   a number or in their own words. The author works by voice dictation, so the prompt reads past dictation errors and asks only
   when two readings differ on a fact such as a name or a number.
@@ -314,7 +316,7 @@ how it works: it gets better from what the projects report, and from auditing it
 | **Versions 1.1 to 1.8** | 30 September to 6 October | Eight versions, each driven by feedback reports from the projects being aligned. The tools became real files that projects copy; the commands became files too; the session ceiling came from two projects whose sessions had passed half a million tokens; the new-session flow came from SkyRoll. |
 | **Its own alignment** | 7 October | The method's repository was aligned by its own procedure, like any existing project. Its start-up cost fell from about 41,000 tokens to 12,200–14,800, and its tools gained an automated suite that runs before every commit. |
 | **Version 2.0** | 8 October | A two-day audit of the whole method produced 68 findings, and every one that called for a change was applied. The chat side, the bridge to code and the quality review became part of the method. |
-| **Version 2.1** | 10 October | The chat side after its first real use, one conversation in each mode, analysed from the exported transcripts: the author confirms the end, the gate is checked on the text, choices are asked in plain text, and project mode starts from the problem. Public texts that promise something about a repository are now checked against what was published. |
+| **Version 2.1** | 10 October | The chat side after its first real use, one conversation in each mode, analysed from the exported transcripts: the author confirms the end, the gate is checked on the text, choices are asked in plain text, and project mode starts from the problem. Public texts that promise something about a repository are now checked against what was published. A second real conversation, in project mode, showed the fixes holding and added two more: one decision per message, readable on its own, and anything close to the idea read at its primary source. |
 
 **The loop that drives it.** A project reports what it learned. A proposal enters the method only
 together with what will enforce it: a test, a tool, a step in a command, a permission; until then
