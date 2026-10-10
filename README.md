@@ -114,6 +114,11 @@ its architecture, principles and results.
 | [Mih.AI](https://github.com/Mihai-Streanga/DigitalTwin-public) | A personal digital twin: a local web app where you talk, by keyboard or by voice, with a model prompted from one person's writing | 23 |
 | [The method](docs/ARCHITECTURE.md#5-the-sixth-project-a-method-that-improves-itself) | The method itself, run as a project: eleven versions, its own alignment, audits and toolkit, and the feedback loop that improves it | 66, in its private repository |
 
+Each product repository holds, at its root, the instructions Claude Code reads when it works
+there: the project's map, commands and rules, for example in
+[Iris](https://github.com/Mihai-Streanga/Iris-public) and [Agent 051](https://github.com/Mihai-Streanga/Agent051-public). They hold each project's own
+rules; the method's working rules stay private.
+
 ## Read more
 
 - **[Architecture](docs/ARCHITECTURE.md)** — the chat side, the build side, the paths for new and
