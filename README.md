@@ -83,7 +83,7 @@ Measured on the six projects, from session transcripts, test runs and version hi
   projects and from independent reviews, then version 2.0 after a two-day audit of the whole
   method: 68 findings, and every one that called for a change applied. On the way the manual
   shrank from 5,793 lines to about 4,500 while gaining the chat side, the quality review and a
-  toolkit covered by 66 tests.
+  toolkit covered by 61 tests.
 
 ## Scale
 

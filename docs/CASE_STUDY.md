@@ -197,9 +197,9 @@ How the method closes work that could otherwise run forever.
 ## Scale
 
 The operating manual for Claude Code is 4,520 lines; the chat side is a full project prompt of
-43 rules. The method's own tooling is covered by 61 tests, all passing, and its repository has
+43 rules. The method's own tooling is covered by 66 tests, all passing, and its repository has
 376 commits. The six projects together have 1,303 commits: 927 in the five products and 376 in
-the method. Figures read on 8 October 2026.
+the method. Figures read on 8 October 2026; the test count on 10 October.
 
 ## About the measurements
 
