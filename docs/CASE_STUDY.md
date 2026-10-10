@@ -63,7 +63,7 @@ through alignment, over several sessions each.
 | Iris | a corpus of 52 recorded clips with an automatic verdict | 32, plus the corpus | 31 |
 | Mih.AI | no automated suite | 24 | 23 |
 | SkyRoll | 71 independent recalculations and numbered guards inside the engine, plus a regression fingerprint on reference files | 410 | 50, on the demonstration engine |
-| The method | no automated suite for its tools | 61, run before every commit | private; this repository is its public face |
+| The method | no automated suite for its tools | 66, run before every commit | private; this repository is its public face |
 
 **SkyRoll** was the first project, designed and built in claude.ai before the work moved to
 Claude Code. Its engine arrived in version control already working, and verification was built

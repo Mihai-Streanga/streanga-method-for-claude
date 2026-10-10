@@ -95,7 +95,7 @@ The route works fast. On 1 October 2026 a quality review of JA.S.Mine found defe
 other check had passed; the same day, the kinds of defect it found became a standing part of the
 method's quality review. Four days later, that addition found the same kinds of defect on
 SkyRoll, and they were fixed the same day. Twenty-two written reports have travelled this route
-so far, and the method's ten versions are what they produced.
+so far, and the method's versions up to 2.0 are what they produced.
 
 ## 8. A method must be able to lose rules
 
