@@ -13,12 +13,13 @@ anything they already have. It runs all five products, and it is the sixth proje
 maintained under its own rules, with its own tooling, tests, audits and release history, and
 improved by the same loop it runs for the others.
 
-## One method, four ways in
+## One method, five ways in
 
 | | What it does | What it produces |
 |---|---|---|
 | **claude.ai, project mode** | An idea is debated until the author can decide whether to build it: three approaches weighed, the areas code can verify separated from those only a person can judge, a smallest first version, a pre-mortem and the one assumption that would make the project pointless. | A written brief that someone who never saw the conversation can read and act on, checked against a five-point gate. |
 | **claude.ai, exploration mode** | Research and new ideas: a search plan, primary sources first, the author's ideas before Claude's, a verdict on every finding. | An exploration file with sources, verdicts and the searches made, checked against a six-point gate. |
+| **claude.ai, review mode** | A built project is held against its starting idea before each version: is it still used, how each of its claims stood up, and what the next version should aim at. | A review that the version waits for, with the improvements it calls for. |
 | **Claude Code, new project** | One set-up session: the brief is read, a short interview asks only what it leaves open, and the project's whole working environment is created from the method and proven to work. | A ready project in a single commit: instructions, permissions, checks, measuring tools, commands, and the files that carry the work from one session to the next. |
 | **Claude Code, existing project** | A fixed sequence of sessions, one kind of change in each: audit, environment, a test safety net, tools, content, publication, report back. | The same environment as a new project, with everything the project already had kept. |
 
@@ -38,8 +39,8 @@ built. **[The architecture](docs/ARCHITECTURE.md)** shows how all the parts fit 
 - **Measured cost.** The cost of a session's start, of whole sessions and of paid API calls is
   measured from the session's own records, and decisions about cost are made on those numbers.
 - **A ready-made toolkit.** A new project starts with tools for measuring cost, checks that
-  enforce the rules, a flow for moving between sessions, seven commands for repeatable work,
-  templates for every starting file, and a catalogue of twenty verification and five
+  enforce the rules, a flow for moving between sessions, nine commands for repeatable work,
+  templates for every starting file, and a catalogue of twenty-one verification and five
   architecture patterns, each proven in one of the projects.
 - **Verification chosen per area.** Arithmetic is recomputed by independent code on every run;
   voice, design and tone are judged in use, by a person.
@@ -74,7 +75,7 @@ Measured on the six projects, from session transcripts, test runs and version hi
   29 files with every rule checker clean.
 - **An automated test suite in every project**, the method included: 410 tests on SkyRoll,
   written from the 71 independent recalculations and the guards already built into its engine;
-  514 on Agent 051; 66 for the method's own tools.
+  514 on Agent 051; 267 for the method's own tools.
 - **Mechanisms hold where text does not.** An audit of the five products against their own rules
   found 26 breaches of rules that existed only as written instructions, and none of any rule
   backed by a permission, a check or a test. On one project, a commit convention went from 20
@@ -83,21 +84,22 @@ Measured on the six projects, from session transcripts, test runs and version hi
   projects and from independent reviews, then version 2.0 after a two-day audit of the whole
   method: 68 findings, and every one that called for a change applied. On the way the manual
   shrank from 5,793 lines to about 4,500 while gaining the chat side, the quality review and a
-  toolkit covered by 61 tests.
+  toolkit covered by 61 tests. Version 3, on 26 October, cut what a new project's set-up reads
+  from the manual by more than half.
 
 ## Scale
 
 | | |
 |---|---|
 | Time | six months, from the first project built in claude.ai to the method in its current form |
-| Operating manual for Claude Code | 4,520 lines, with a catalogue of twenty verification and five architecture patterns |
+| Operating manual for Claude Code | 2,826 lines, with its templates in separate files and a catalogue of twenty-one verification and five architecture patterns |
 | Working instructions for claude.ai | a full project prompt of 43 rules, reviewed over five rounds by an independent model |
-| The method's own tooling | 66 automated tests, all passing |
-| Versions of the method | eleven, from version 1 to version 2.1 |
+| The method's own tooling | 267 automated tests, all passing |
+| Versions of the method | twelve, from version 1 to version 3 |
 | Written feedback | 22 reports, from the projects and from independent reviews |
 | The six projects | 1,303 commits: 927 in the five products, 376 in the method |
 
-Figures read on 8 October 2026; tests and versions on 10 October.
+Figures read on 8 October 2026; the manual, tests and versions on 26 October.
 
 ## The six projects
 
@@ -112,7 +114,7 @@ its architecture, principles and results.
 | [JA.S.Mine](https://github.com/Mihai-Streanga/Jasmine-public) | A personal assistant that runs full-screen on a Windows laptop, with rooms for mail, news, a log of facts and three conversation styles | 49 checks in four suites, plus an integration test with Agent 051 |
 | [Iris](https://github.com/Mihai-Streanga/Iris-public) | Local voice dictation for Windows: speech recognition on your own machine, text typed wherever the cursor is | 31, plus a corpus of recorded clips with an automatic verdict |
 | [Mih.AI](https://github.com/Mihai-Streanga/DigitalTwin-public) | A personal digital twin: a local web app where you talk, by keyboard or by voice, with a model prompted from one person's writing | 23 |
-| [The method](docs/ARCHITECTURE.md#5-the-sixth-project-a-method-that-improves-itself) | The method itself, run as a project: eleven versions, its own alignment, audits and toolkit, and the feedback loop that improves it | 66, in its private repository |
+| [The method](docs/ARCHITECTURE.md#5-the-sixth-project-a-method-that-improves-itself) | The method itself, run as a project: twelve versions, its own alignment, audits and toolkit, and the feedback loop that improves it | 267, in its private repository |
 
 Each product repository holds, at its root, the instructions Claude Code reads when it works
 there: the project's map, commands and rules, for example in

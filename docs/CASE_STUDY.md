@@ -5,7 +5,7 @@ job-search agent, a personal assistant, a dictation tool and a digital twin. The
 method itself, run as a project under its own rules. The first product, SkyRoll, was built in
 claude.ai; the work then moved to Claude Code, and the method grew out of what the projects
 taught. Between 29 September and 8 October 2026 all six were brought onto the method and then
-updated to its current version, 2.0.
+updated to version 2.0, current at the time; they move to version 3 next.
 
 This page shows what changed, with the numbers and how they were taken.
 
@@ -63,7 +63,7 @@ through alignment, over several sessions each.
 | Iris | a corpus of 52 recorded clips with an automatic verdict | 32, plus the corpus | 31 |
 | Mih.AI | no automated suite | 24 | 23 |
 | SkyRoll | 71 independent recalculations and numbered guards inside the engine, plus a regression fingerprint on reference files | 410 | 50, on the demonstration engine |
-| The method | no automated suite for its tools | 66, run before every commit | private; this repository is its public face |
+| The method | no automated suite for its tools | 267, run before every commit | private; this repository is its public face |
 
 **SkyRoll** was the first project, designed and built in claude.ai before the work moved to
 Claude Code. Its engine arrived in version control already working, and verification was built
@@ -196,10 +196,10 @@ How the method closes work that could otherwise run forever.
 
 ## Scale
 
-The operating manual for Claude Code is 4,520 lines; the chat side is a full project prompt of
-43 rules. The method's own tooling is covered by 66 tests, all passing, and its repository has
+The operating manual for Claude Code is 2,826 lines; the chat side is a full project prompt of
+43 rules. The method's own tooling is covered by 267 tests, all passing, and its repository has
 376 commits. The six projects together have 1,303 commits: 927 in the five products and 376 in
-the method. Figures read on 8 October 2026; the test count on 10 October.
+the method. Figures read on 8 October 2026; the manual and the test count on 26 October.
 
 ## About the measurements
 

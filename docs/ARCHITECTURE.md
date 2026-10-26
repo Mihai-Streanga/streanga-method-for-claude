@@ -58,7 +58,7 @@ The chat side is a complete project prompt for claude.ai. It turns Claude into a
 partner that challenges the author, separates what is known from what is assumed, and ends every
 conversation with a document that someone who never saw the chat can read and act on.
 
-### Two modes
+### Three modes
 
 | | Exploration mode | Project mode |
 |---|---|---|
@@ -66,6 +66,11 @@ conversation with a document that someone who never saw the chat can read and ac
 | **How it works** | A short search plan the author can cut or extend; primary sources before secondary ones; the author's own ideas first, so Claude's do not anchor them; then a wide set of ideas, some under forced constraints ("no money", "local only", "ready in a day") | It starts from the problem and what already exists, with anything close to the idea read at its primary source; two or three approaches are weighed, with the strongest form of each rejected one stated before it goes; the work is split into areas that code can verify and areas only the author can judge, with worked examples for the first, the author's own or candidates drawn by Claude Code, each with the author's verdict; a smallest first version; only then, once it is clear what the project does, the author's own description of it and its name; a pre-mortem and the single assumption that would make the project pointless if false |
 | **Every finding gets** | A verdict: worth following, eliminated with the reason, or unverified with how to verify it | A place in the brief: decided, out of scope, a sign to watch, or open |
 | **It ends with** | An exploration file, checked against a six-point gate before delivery | An ideas brief, checked against a five-point gate, then tested in a fresh chat that sees only the document |
+
+**Review mode**, added in version 3, brings a built project back to the chat before each version.
+It asks first whether the project is still used, then gives every claim of the starting idea a
+verdict with its evidence, and ends with what the next version should aim at. The version is not
+declared until the review is in.
 
 ### What holds every conversation together
 
@@ -113,7 +118,8 @@ always be compared with what it became.
   only the questions it leaves open.
 - **What the chat decided is checked later.** The worked examples from the chat must each end up
   as a test, and the quality review counts the ones that did not. The assumption that would make
-  the project pointless gets a verdict at closing: confirmed, disproved or still unverified.
+  the project pointless gets a verdict at closing on a graded scale: confirmed, confirmed in a narrower form, confirmed
+  only at the threshold, disproved, or still unverified.
 - **Each surface keeps its own decisions.** The chat decides what is worth building and why. How
   it is specified, verified and structured is decided in Claude Code, where the code is.
 
@@ -131,7 +137,8 @@ Since October 2026 this is the method's main path. A new project gets, on its fi
 existing projects only gained through alignment.
 
 1. **One set-up session, and nothing else in it.** No product code is written. The session reads
-   the method once and builds the project's working environment.
+   the method's protocol and its opening parts once, and the rest only a section at a time, when
+   a step needs it; then it builds the project's working environment.
 2. **A six-question interview**, one question at a time: what the project is and does; whether it
    calls a paid model; which areas code will verify and which the author will judge; what gets
    installed on the machine; whether personal data is involved; what it reuses from earlier
@@ -143,7 +150,10 @@ existing projects only gained through alignment.
    that stop a bad commit, the measuring tools, the commands for repeatable work, and the files
    that carry the project's state and specification from one session to the next.
 4. **Proof that it works.** A deliberately broken file must be blocked by the project's checks
-   before the session can finish, and the start-up cost is measured and recorded.
+   before the session can finish, and the start-up cost is measured and recorded. Five safeguards
+   are each shown working once: an audit that knows when to stop, a new session opened on the
+   author's yes, a context ceiling for every session, a review before every version, and one
+   session at a time on each project.
 5. **One commit, then stop.** Work starts in a new session, on a clean environment.
 
 Some parts appear only when the project produces something for them, such as a test suite, a log
@@ -191,7 +201,7 @@ Both paths lead into the same cycle:
 - **Rules are held by mechanisms.** Permissions the agent does not have, checks that stop a
   commit, hooks inside the agent's own loop, tests that fail. Every commit records how full the
   session's context is, and says so when the session should end.
-- **Verification is chosen per area.** The method keeps a catalogue of twenty verification
+- **Verification is chosen per area.** The method keeps a catalogue of twenty-one verification
   patterns and five architecture patterns, each taken from a project where it worked:
   independent recalculation of every figure, a three-state verdict (correct, wrong, unverified),
   numbered guards that stop a run, a versioned corpus with an automatic verdict, test files broken
@@ -225,7 +235,7 @@ Closing is a written sequence of nine steps in a fixed order, so that a finished
 recorded fact rather than a feeling: a factual audit; repairs in a fresh session, so the instance
 that repairs is not the one that audited; a second audit, then the quality review; the installation guide written and then followed on the machine; an idea pass; the
 technical specification; the author's reading in a fresh session; the version declared and
-committed; and the report back to the method.
+committed, once the review in the chat is in; and the report back to the method.
 
 ---
 
@@ -265,8 +275,9 @@ recorded with it.
   editor and closes the old one, through a small helper and an editor extension.
 
 **Commands for repeatable work**
-- seven commands: factual audit, repair, ideas, technical specification, session hand-over, new
-  session, and quality review.
+- nine commands: factual audit, repair, ideas, technical specification, session hand-over, new
+  session, quality review, a usage audit for projects with an interface, and the return to the
+  chat, which reviews the project against its starting idea.
 
 **Documentation**
 - a guide for writing a project's technical specification, and a checker that verifies it
@@ -283,10 +294,11 @@ recorded with it.
   public description.
 
 **A catalogue of patterns**
-- twenty verification patterns: independent recalculation; a three-state verdict; a warning
+- twenty-one verification patterns: independent recalculation; a three-state verdict; a warning
   raised only when the phenomenon occurs; counterfactual reconciliation; a catalogue of elements
   with markers; a completeness guard; identification by content, not by name; numbered guards
   that stop a run; an isolated configuration suite; a versioned corpus with an automatic verdict;
+  a blind benchmark, with everything between signal and verdict committed before the run;
   old against new on the whole archive; a recorded corpus run through the product's own chain;
   measurement as a set of commands; figures kept apart from reasons; a live probe that asks each
   service whether it is alive; a health check that never touches the paid API; a start-up that fails loudly; test files broken on
@@ -317,6 +329,7 @@ how it works: it gets better from what the projects report, and from auditing it
 | **Its own alignment** | 7 October | The method's repository was aligned by its own procedure, like any existing project. Its start-up cost fell from about 41,000 tokens to 12,200–14,800, and its tools gained an automated suite that runs before every commit. |
 | **Version 2.0** | 8 October | A two-day audit of the whole method produced 68 findings, and every one that called for a change was applied. The chat side, the bridge to code and the quality review became part of the method. |
 | **Version 2.1** | 10 October | The chat side after its first real use, one conversation in each mode, analysed from the exported transcripts: the author confirms the end, the gate is checked on the text, choices are asked in plain text, and project mode starts from the problem. Public texts that promise something about a repository are now checked against what was published. A second real conversation, in project mode, showed the fixes holding and added two more: one decision per message, readable on its own, and anything close to the idea read at its primary source. |
+| **Version 3** | 26 October | Set-up gained five safeguards for the moments that matter most in a working session, and each is shown working before the project starts. The files every project copies now live as templates of their own, so the manual is 2,826 lines instead of 4,578. In a trial set-up of the same fictional project, version 3 read 33,500 tokens of the manual, against 76,800 on version 2.1, and built everything version 2.1 built, with more besides. The chat side gained a third mode, a review of a built project against its starting idea, which now comes before every version. An audit before the release went through the whole method: 40 findings, each applied or decided by the author. |
 
 **The loop that drives it.** A project reports what it learned. A proposal enters the method only
 together with what will enforce it: a test, a tool, a step in a command, a permission; until then
@@ -327,7 +340,8 @@ report again. Twenty-two written reports have gone round this loop so far.
 5,793 lines to about 4,500 while gaining a second surface, a quality review and a tested toolkit. Code
 moved out of the text into tested files, duplicates were removed, and retiring a rule is a
 defined step, with its reasons kept. Reading the method for a new project's set-up fell from 133,000 tokens,
-measured on version 1, to 87,000.
+measured on version 1, to 87,000. Version 3 took the same direction further: the templates left
+the manual, and a trial set-up read less than half of what version 2.1 had read.
 
 **It audits itself the way it audits projects.** The audit before version 2.0 asked four
 questions: can the method measure its own results, does it still cover what it set out to cover,
