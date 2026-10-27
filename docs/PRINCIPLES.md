@@ -1,7 +1,7 @@
 # Principles
 
 The ten principles the Streanga Method is built on. Each one says what it asks for, why, and the
-real situation it came from: every principle below was earned on one of the six projects built
+real situation it came from: every principle below was earned on one of the projects built
 with the method, the method itself included, and each changed how those projects work.
 
 They hold on both surfaces. In claude.ai, every conversation starts with its stopping condition
@@ -89,13 +89,13 @@ learned, and the method changes on that evidence.
 *Where it comes from:* a factual audit of the five products found their best inventions — a test
 suite running in under two seconds, a versioned test corpus with an automatic verdict, a cost
 counter for paid API calls — each living in one project, or two at most. Through the method, a
-test suite now runs in all five, and the cost counter in every one that calls a paid API.
+test suite now runs in every project, and the cost counter in every one that calls a paid API.
 
 The route works fast. On 1 October 2026 a quality review of JA.S.Mine found defects that every
 other check had passed; the same day, the kinds of defect it found became a standing part of the
 method's quality review. Four days later, that addition found the same kinds of defect on
-SkyRoll, and they were fixed the same day. Twenty-two written reports have travelled this route
-so far, and the method's versions up to 2.0 are what they produced.
+SkyRoll, and they were fixed the same day. Thirty-eight written reports and conversation records
+have travelled this route so far, and the method's versions up to 3 are what they produced.
 
 ## 8. A method must be able to lose rules
 
@@ -108,7 +108,8 @@ on record: it had been used up by its own construction, its threshold came from 
 maintaining it cost as much as what it measured. What was still worth measuring is now checked
 with two questions instead of twenty. The method holds itself to the same rule: between version 1
 and version 2.0 its manual went from 5,793 lines to about 4,500, while gaining the chat side, the
-quality review and a tested toolkit.
+quality review and a tested toolkit; version 3 brought it to 2,826, with the files every project
+copies kept as templates of their own.
 
 ## 9. The AI proposes, code computes, a person decides
 

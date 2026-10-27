@@ -1,11 +1,13 @@
-# Case study: six projects on one method
+# Case study: seven projects on one method
 
-Six projects, built over six months. Five are products: a payroll verification suite, a
-job-search agent, a personal assistant, a dictation tool and a digital twin. The sixth is the
-method itself, run as a project under its own rules. The first product, SkyRoll, was built in
+Seven projects, built over six months. Five are products: a payroll verification suite, a
+job-search agent, a personal assistant, a dictation tool and a digital twin. The sixth,
+HarnessCraft, is a prototype that assesses skill in working with AI. The seventh is the method itself, run as a project under its
+own rules. The first product, SkyRoll, was built in
 claude.ai; the work then moved to Claude Code, and the method grew out of what the projects
-taught. Between 29 September and 8 October 2026 all six were brought onto the method and then
-updated to version 2.0, current at the time; they move to version 3 next.
+taught. Between 29 September and 8 October 2026 the first six were brought onto the method and
+then updated to version 2.0, current at the time. HarnessCraft, the newest project, started on
+version 2.1 from its first commit, on 10 October. They all move to version 3 next.
 
 This page shows what changed, with the numbers and how they were taken.
 
@@ -29,30 +31,31 @@ the sessions that followed. Mih.AI was already lean. For the method, one later s
 opened at 52,600 is left out of the range. On version 2.0 the first sessions measured
 14,000 on Agent 051 and 13,600 on JA.S.Mine.
 
-**But the start is the smaller part of what a session costs.** Measured across the six projects,
+**But the start is the smaller part of what a session costs.** Measured across the first six projects,
 what every request carries at the start is 15–20% of all the tokens a session processes. The rest
 is the conversation itself, sent again with every request, so a session's cost grows faster the
 longer it runs. The method therefore also measures whole sessions, records in every commit how
 full the session's context is, and sets a ceiling past which the commit says the session should
 end and a fresh one start from the written state of the work.
 
-| Sessions in the six projects | Before the session ceiling | After it (from 1 October 2026) |
+| Sessions in the first six projects | Before the session ceiling | After it (1 to 8 October 2026) |
 |---|---:|---:|
 | Sessions | 29 | 91 |
 | Sessions whose context grew past 300,000 tokens | 6 | 2 |
 | Largest context reached | 571,000 | 421,000 |
 | Median of the largest context per session | 215,000 | 124,000 |
 
-Read from every session transcript of the six projects, with the method's own session tool. In
-the five products, no session has passed 300,000 since the ceiling; the two that did were in the
+Read from every session transcript of the first six projects, with the method's own session tool.
+In the five products, no session passed 300,000 after the ceiling; the two that did were in the
 method's own repository on 8 October, the day version 2.0 was completed.
 
 **Starting a new project costs one session.** The method's set-up for a new project has been run
 end to end in automated trials. Each run took one session of about forty requests and about
 US$3 at API list prices, and produced a ready project of 29 files in a single commit: working
 instructions, permissions, checks, measuring tools, commands and the files that carry the state
-of the work, with every rule checker clean. The six existing projects reached the same point
-through alignment, over several sessions each.
+of the work, with every rule checker clean. The first six projects reached the same point
+through alignment, over several sessions each. HarnessCraft started from that point: one set-up
+commit on 10 October, and its version 1.0 sixteen days later.
 
 ## Verification: an automated suite in every project
 
@@ -63,6 +66,7 @@ through alignment, over several sessions each.
 | Iris | a corpus of 52 recorded clips with an automatic verdict | 32, plus the corpus | 31 |
 | Mih.AI | no automated suite | 24 | 23 |
 | SkyRoll | 71 independent recalculations and numbered guards inside the engine, plus a regression fingerprint on reference files | 410 | 50, on the demonstration engine |
+| HarnessCraft | started on the method, with tests from its first feature, on its first day | 318 | private |
 | The method | no automated suite for its tools | 267, run before every commit | private; this repository is its public face |
 
 **SkyRoll** was the first project, designed and built in claude.ai before the work moved to
@@ -147,7 +151,7 @@ first project brought onto the method, on 29 and 30 September 2026, and has the 
   check or a test held.
 - **Quality:** its baseline was the first to be recorded, on 30 September.
 
-## The sixth project: the method
+## The seventh project: the method
 
 The method is held to the same standard as the products, and its history shows it improving
 itself. Version 1, on 29 September 2026, was a single document of 5,793 lines with every tool
@@ -173,8 +177,15 @@ was applied, one commit each. Version 2.0 came out of it with:
 
 Between version 1 and version 2.0 the operating manual went from 5,793 lines to about 4,500,
 while gaining the chat side, the quality review and a toolkit covered by 61 tests. Reading the
-method for a new project's set-up fell from 133,000 tokens to 87,000. The
-[architecture](ARCHITECTURE.md#5-the-sixth-project-a-method-that-improves-itself) shows the loop
+method for a new project's set-up fell from 133,000 tokens to 87,000.
+
+Version 3, on 26 October, took the same direction further. The files every project copies now
+live as templates of their own, so the manual is 2,826 lines instead of 4,578, and in a trial
+set-up of the same fictional project version 3 read 33,500 tokens of it, against 76,800 on
+version 2.1. Set-up gained five safeguards, each shown working before the project starts, and
+the chat side gained a review mode that now comes before every version. An audit of the whole
+method came first: 40 findings, each applied or decided by the author. The
+[architecture](ARCHITECTURE.md#5-the-seventh-project-a-method-that-improves-itself) shows the loop
 behind it.
 
 ## Three decisions on record
@@ -197,9 +208,9 @@ How the method closes work that could otherwise run forever.
 ## Scale
 
 The operating manual for Claude Code is 2,826 lines; the chat side is a full project prompt of
-43 rules. The method's own tooling is covered by 267 tests, all passing, and its repository has
-376 commits. The six projects together have 1,303 commits: 927 in the five products and 376 in
-the method. Figures read on 8 October 2026; the manual and the test count on 26 October.
+45 rules in three modes. The method's own tooling is covered by 267 tests, all passing, and its
+repository has 684 commits. The seven projects together have 2,082 commits: 1,398 in the other
+six projects and 684 in the method. Figures read on 27 October 2026.
 
 ## About the measurements
 

@@ -17,6 +17,7 @@ flowchart LR
     subgraph CHAT["claude.ai: think and decide"]
         EX["Exploration mode<br/>research and ideas"]
         PR["Project mode<br/>an idea debated<br/>until it can be decided"]
+        RV["Review mode<br/>a built project held<br/>against its starting idea"]
         EX -- "an idea worth building" --> PR
     end
 
@@ -32,6 +33,7 @@ flowchart LR
 
     PR -- "the written brief" --> NEW
     WORK -. "open questions" .-> CHAT
+    CLOSE -- "before each version" --> RV
     CLOSE -- "feedback report" --> M[("The method<br/>versioned, tested,<br/>audited")]
     M -- "next version" --> NEW
     M -- "update" --> WORK
@@ -46,9 +48,9 @@ Four things to notice:
   same rules, tools and checks. They only differ in how they get there.
 - **One way back.** Every project reports what it learned, and the method changes on that
   evidence. A good solution found in one project reaches all of them.
-- **The method is itself a project, the sixth.** It has its own repository, tests, versions and
+- **The method is itself a project, the seventh.** It has its own repository, tests, versions and
   audits, it was aligned by its own procedure, and it improves itself through the same loop it
-  runs for the other five.
+  runs for the other six.
 
 ---
 
@@ -134,7 +136,8 @@ written to disk stay in Claude Code.
 ### Path A: a new project
 
 Since October 2026 this is the method's main path. A new project gets, on its first day, what the
-existing projects only gained through alignment.
+existing projects only gained through alignment. HarnessCraft, the first project started on it,
+went from its set-up commit on 10 October to its version 1.0 on 26 October.
 
 1. **One set-up session, and nothing else in it.** No product code is written. The session reads
    the method's protocol and its opening parts once, and the rest only a section at a time, when
@@ -195,9 +198,10 @@ Both paths lead into the same cycle:
 - **Every session starts from disk.** The agent remembers nothing between sessions, so the state
   of the work, the open debts and the next step are written down and committed before a session
   ends. A new session opens from a prompt prepared by the previous one.
-- **Repeatable work has its own commands:** a factual audit, a repair pass on what the audit
-  found, an idea pass, a technical specification, a session hand-over, opening the next session,
-  and a quality review.
+- **Repeatable work has its own commands,** nine of them: a factual audit, a repair pass on what
+  the audit found, an idea pass, a technical specification, a session hand-over, opening the next
+  session, a quality review, a usage audit for projects with an interface, and the return to the
+  chat.
 - **Rules are held by mechanisms.** Permissions the agent does not have, checks that stop a
   commit, hooks inside the agent's own loop, tests that fail. Every commit records how full the
   session's context is, and says so when the session should end.
@@ -317,7 +321,7 @@ recorded with it.
 
 ---
 
-## 5. The sixth project: a method that improves itself
+## 5. The seventh project: a method that improves itself
 
 The method is run as a project, under its own rules, and its history is the clearest evidence of
 how it works: it gets better from what the projects report, and from auditing itself.
@@ -334,7 +338,8 @@ how it works: it gets better from what the projects report, and from auditing it
 **The loop that drives it.** A project reports what it learned. A proposal enters the method only
 together with what will enforce it: a test, a tool, a step in a command, a permission; until then
 it waits on a list of candidates. The projects are then updated to the new version, use it, and
-report again. Twenty-two written reports have gone round this loop so far.
+report again. Thirty-eight written reports and conversation records have gone round this loop so
+far.
 
 **It grows by getting smaller.** Between version 1 and version 2.0 the operating manual went from
 5,793 lines to about 4,500 while gaining a second surface, a quality review and a tested toolkit. Code
