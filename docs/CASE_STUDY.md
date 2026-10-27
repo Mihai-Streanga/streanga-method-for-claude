@@ -236,7 +236,7 @@ work itself takes the rest.
 | | HarnessCraft |
 |---|---|
 | Automated tests, private repository | 320, all passing (318 at version 1.0) |
-| Public repository | 281, plus 3 skipped with the reason |
+| Public repository | 281, plus 2 skipped with the reason |
 | Continuous integration | the suite runs on GitHub on every push that changes code |
 
 Tests were written with the code from the first day. Of the first 83 commits that added or fixed
