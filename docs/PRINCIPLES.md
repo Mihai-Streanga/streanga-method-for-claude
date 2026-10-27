@@ -22,6 +22,11 @@ definition of "finished", and an image generation task ran for two days on a pat
 succeed. Both had the same missing piece. Since then every repeatable task in the method opens with
 its acceptance condition, and a specification is written to it from the first draft.
 
+The condition holds when the result disappoints. On HarnessCraft, the rules for each calibration
+round were fixed before the round ran. A code-quality measure then matched the author's blind
+ranking on 8 of 12 projects, against a threshold of 10 set in advance; it stays in the report as
+information, outside the score, and the threshold stayed where it was.
+
 ## 2. Rules that matter are enforced by a mechanism
 
 A rule written in the agent's instructions is followed most of the time. A rule that matters is
@@ -121,6 +126,10 @@ right, and settles the questions that analysis alone keeps open.
 total, and each full pass surfaced new points. A single round of decisions with the author closed
 the eleven open points in one turn. The method now routes open questions to the person who can
 decide them.
+
+HarnessCraft is built the same way. It assesses how a candidate works with AI, yet the program
+calls no AI model: every score and every interview question comes from written rules, and the
+recruiter writes the conclusion.
 
 ## 10. What exists only in the conversation is lost
 

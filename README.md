@@ -63,20 +63,24 @@ Measured on the projects, from session transcripts, test runs and version histor
   page. On SkyRoll: text from payroll files that reached the page unescaped, and an application
   that answered on the whole local network while showing real payroll data. Most of the SkyRoll
   defects were found by questions the method had added four days earlier, from the JA.S.Mine
-  review.
+  review. On HarnessCraft, four quality reviews in three days: the second found four defects in
+  what happens when something fails, and the third found all four closed.
 - **Sessions that stay lean.** The start of a session is only 15–20% of what it processes; the
   rest is the conversation. In the first week after the method set a ceiling on session growth,
   2 sessions out of 91 passed 300,000 tokens of context, against 6 out of 29 before, and the
   median session peaked at 124,000 instead of 215,000. In the products, none passed it.
 - **Session start-up cost cut by 61–75%** on five of the six projects brought onto the method,
   the method included, and by 23% on the sixth, which was already lean.
-- **A new project in one session.** In end-to-end trials, setting up a new project took one
-  session of about forty requests, about US$3 at API list prices, and produced a ready project of
-  29 files with every rule checker clean. HarnessCraft, the first project started this way, went
-  from its set-up commit on 10 October to its version 1.0 on 26 October, with 318 tests.
+- **A new project, on the method from day one.** Setting up a project takes one session: in
+  end-to-end trials, about forty requests and about US$3 at API list prices, for a ready project
+  of 29 files with every rule checker clean. HarnessCraft, the first project started this way,
+  went from its set-up commit on 10 October to its version 1.0 on 26 October, with 318 tests, six
+  audits, four quality reviews and a review against its starting idea on the way. Across its 69
+  sessions the median first request is 12,575 tokens, and the start of each request is about a
+  tenth of all it processed.
 - **An automated test suite in every project**, the method included: 410 tests on SkyRoll,
   written from the 71 independent recalculations and the guards already built into its engine;
-  514 on Agent 051; 320 on HarnessCraft; 267 for the method's own tools.
+  514 on Agent 051; 320 on HarnessCraft; 273 for the method's own tools.
 - **Mechanisms hold where text does not.** An audit of the five products against their own rules
   found 26 breaches of rules that existed only as written instructions, and none of any rule
   backed by a permission, a check or a test. On one project, a commit convention went from 20
@@ -93,12 +97,12 @@ Measured on the projects, from session transcripts, test runs and version histor
 | | |
 |---|---|
 | Time | six months, from the first project built in claude.ai to the method in its current form |
-| Operating manual for Claude Code | 2,826 lines, with its templates in separate files and a catalogue of twenty-one verification and five architecture patterns |
+| Operating manual for Claude Code | 2,828 lines, with its templates in separate files and a catalogue of twenty-one verification and five architecture patterns |
 | Working instructions for claude.ai | a full project prompt of 45 rules in three modes, reviewed over five rounds by an independent model |
-| The method's own tooling | 267 automated tests, all passing |
+| The method's own tooling | 273 automated tests, all passing |
 | Versions of the method | twelve, from version 1 to version 3 |
 | Written feedback | 38 reports and conversation records, from the projects, from real chat conversations and from independent reviews |
-| The seven projects | 2,082 commits: 1,398 in the other six projects, 684 in the method |
+| The seven projects | 2,108 commits: 1,414 in the other six projects, 694 in the method |
 
 Figures read on 27 October 2026.
 
@@ -116,7 +120,7 @@ The method is private: this repository presents its architecture, principles and
 | [Iris](https://github.com/Mihai-Streanga/Iris-public) | Local voice dictation for Windows: speech recognition on your own machine, text typed wherever the cursor is | 31, plus a corpus of recorded clips with an automatic verdict |
 | [Mih.AI](https://github.com/Mihai-Streanga/DigitalTwin-public) | A personal digital twin: a local web app where you talk, by keyboard or by voice, with a model prompted from one person's writing | 23 |
 | [HarnessCraft](https://github.com/Mihai-Streanga/HarnessCraft-public) | A prototype that assesses skill in working with AI, built to help recruiters: scores from a candidate's projects, a practical test and an interview, with an interview guide. The first project started on the method from its first commit. | 281, plus 3 skipped with the reason: two need private files, one is the author's own case |
-| [The method](docs/ARCHITECTURE.md#5-the-seventh-project-a-method-that-improves-itself) | The method itself, run as a project: twelve versions, its own alignment, audits and toolkit, and the feedback loop that improves it | 267, in its private repository |
+| [The method](docs/ARCHITECTURE.md#5-the-seventh-project-a-method-that-improves-itself) | The method itself, run as a project: twelve versions, its own alignment, audits and toolkit, and the feedback loop that improves it | 273, in its private repository |
 
 Each product repository holds, at its root, the instructions Claude Code reads when it works
 there: the project's map, commands and rules, for example in
@@ -130,8 +134,9 @@ rules; the method's working rules stay private.
   itself.
 - **[Principles](docs/PRINCIPLES.md)** — the ten principles the method is built on, each with the
   real situation that produced it.
-- **[Case study](docs/CASE_STUDY.md)** — the seven projects on the method: cost, verification,
-  rules, quality and the method's own evolution, with the numbers and how they were taken.
+- **[Case study](docs/CASE_STUDY.md)** — in two parts: the six existing projects brought onto
+  the method, and HarnessCraft, the new project started on it. Cost, verification, rules, quality
+  and the method's own evolution, with the numbers and how they were taken.
 
 ## About the author
 

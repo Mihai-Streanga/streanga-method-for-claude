@@ -164,6 +164,11 @@ of lessons or an installation guide. An empty file that looks like content is wo
 
 The whole path has been run end to end in automated trials: from the interview to a ready project
 of 29 files in a single commit, with every rule checker clean, in about forty requests.
+HarnessCraft is its first real run, from a debate in claude.ai to a version 1.0 reached after six
+audits, four quality reviews and a review against its starting idea. A commit check it added,
+which refuses a change to the product's code without a test, went back to the method, and every
+new project now starts with it
+([case study](CASE_STUDY.md#part-2-a-new-project-harnesscraft-on-the-method-from-its-first-commit)).
 
 ### Path B: an existing project
 
@@ -333,7 +338,7 @@ how it works: it gets better from what the projects report, and from auditing it
 | **Its own alignment** | 7 October | The method's repository was aligned by its own procedure, like any existing project. Its start-up cost fell from about 41,000 tokens to 12,200–14,800, and its tools gained an automated suite that runs before every commit. |
 | **Version 2.0** | 8 October | A two-day audit of the whole method produced 68 findings, and every one that called for a change was applied. The chat side, the bridge to code and the quality review became part of the method. |
 | **Version 2.1** | 10 October | The chat side after its first real use, one conversation in each mode, analysed from the exported transcripts: the author confirms the end, the gate is checked on the text, choices are asked in plain text, and project mode starts from the problem. Public texts that promise something about a repository are now checked against what was published. A second real conversation, in project mode, showed the fixes holding and added two more: one decision per message, readable on its own, and anything close to the idea read at its primary source. |
-| **Version 3** | 26 October | Set-up gained five safeguards for the moments that matter most in a working session, and each is shown working before the project starts. The files every project copies now live as templates of their own, so the manual is 2,826 lines instead of 4,578. In a trial set-up of the same fictional project, version 3 read 33,500 tokens of the manual, against 76,800 on version 2.1, and built everything version 2.1 built, with more besides. The chat side gained a third mode, a review of a built project against its starting idea, which now comes before every version. An audit before the release went through the whole method: 40 findings, each applied or decided by the author. |
+| **Version 3** | 26 October | Set-up gained five safeguards for the moments that matter most in a working session, and each is shown working before the project starts. The files every project copies now live as templates of their own, so the manual is 2,826 lines instead of 4,578. In a trial set-up of the same fictional project, version 3 read 33,500 tokens of the manual, against 76,800 on version 2.1, and built everything version 2.1 built, with more besides. The chat side gained a third mode, a review of a built project against its starting idea, which now comes before every version. An audit before the release went through the whole method: 40 findings, each applied or decided by the author. HarnessCraft's notes to the method, numbered HC1 to HC56, were worked through for this version, among them the commit check that asks for a test with every change to a product's code. |
 
 **The loop that drives it.** A project reports what it learned. A proposal enters the method only
 together with what will enforce it: a test, a tool, a step in a command, a permission; until then

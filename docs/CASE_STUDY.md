@@ -207,7 +207,7 @@ day. Every figure below was taken with the method's own tools, from the project'
 |---|---|
 | 10 October 2026 | The idea debated in claude.ai, in project mode; the brief became the project's founding text. The same day, one set-up session on version 2.1 of the method and a single commit: instructions, permissions, checks, measuring tools, commands and the files that carry the state of the work. Tests came with the first feature. |
 | 16 October | A first full audit of the project, in the method's standard form. |
-| 16 to 21 October | Five more audits, each of what had changed since the one before, and four quality reviews, each compared with the last. |
+| 16 to 21 October | Five more audits and four quality reviews, each review compared with the last. |
 | 22 October | A review in the chat, holding the built project against the idea it started from. |
 | 26 October | Version 1.0, declared by the author: 414 commits and 318 tests. |
 | 27 October | A public copy, derived from the private repository and checked on a fresh clone. |
@@ -246,10 +246,9 @@ method, and every new project now starts with it.
 
 ## Audited and reviewed while it was built
 
-**Six audits in six days.** One full audit on 16 October, then five audits of each change since
-the previous one, up to 21 October. The audits end with their points sorted: fixed mechanically,
-decided by the author, or left with a reason. On 21 October a single round of decisions by the
-author settled 44 points, and the next audit confirmed them applied in the code.
+**Six audits in six days.** One full audit on 16 October, then five more, up to 21 October. The
+points each audit raised were settled before the next: on 21 October a single round of decisions
+by the author settled 44 of them, and all were in the code the same day.
 
 **Four quality reviews in three days.** From 19 to 21 October the code was read against the
 method's references, each review compared with the one before. The second found four defects in
@@ -301,7 +300,7 @@ How the method closes work that could otherwise run forever.
 
 ## Scale
 
-The operating manual for Claude Code is 2,826 lines; the chat side is a full project prompt of
+The operating manual for Claude Code is 2,828 lines; the chat side is a full project prompt of
 45 rules in three modes. The method's own tooling is covered by 273 tests, all passing, and its
 repository has 694 commits. The seven projects together have 2,108 commits: 1,414 in the other
 six projects, 433 of them in HarnessCraft, and 694 in the method. Figures read on 27 October 2026.
