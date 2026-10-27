@@ -76,7 +76,7 @@ Measured on the projects, from session transcripts, test runs and version histor
   from its set-up commit on 10 October to its version 1.0 on 26 October, with 318 tests.
 - **An automated test suite in every project**, the method included: 410 tests on SkyRoll,
   written from the 71 independent recalculations and the guards already built into its engine;
-  514 on Agent 051; 318 on HarnessCraft; 267 for the method's own tools.
+  514 on Agent 051; 320 on HarnessCraft; 267 for the method's own tools.
 - **Mechanisms hold where text does not.** An audit of the five products against their own rules
   found 26 breaches of rules that existed only as written instructions, and none of any rule
   backed by a permission, a check or a test. On one project, a commit convention went from 20
@@ -104,9 +104,9 @@ Figures read on 27 October 2026.
 
 ## The seven projects
 
-The five products are public; their test counts were taken on 8 October 2026 by running each
-suite on a fresh clone of the public repository. HarnessCraft, the newest project, and the method
-are private: for the method, this repository presents its architecture, principles and results.
+The five products and HarnessCraft are public; their test counts were taken by running each suite
+on a fresh clone of the public repository, on 8 October 2026 and, for HarnessCraft, on 27 October.
+The method is private: this repository presents its architecture, principles and results.
 
 | Project | What it does | Tests in the public repository |
 |---|---|---|
@@ -115,7 +115,7 @@ are private: for the method, this repository presents its architecture, principl
 | [JA.S.Mine](https://github.com/Mihai-Streanga/Jasmine-public) | A personal assistant that runs full-screen on a Windows laptop, with rooms for mail, news, a log of facts and three conversation styles | 49 checks in four suites, plus an integration test with Agent 051 |
 | [Iris](https://github.com/Mihai-Streanga/Iris-public) | Local voice dictation for Windows: speech recognition on your own machine, text typed wherever the cursor is | 31, plus a corpus of recorded clips with an automatic verdict |
 | [Mih.AI](https://github.com/Mihai-Streanga/DigitalTwin-public) | A personal digital twin: a local web app where you talk, by keyboard or by voice, with a model prompted from one person's writing | 23 |
-| HarnessCraft | A prototype that assesses skill in working with AI, built to help recruiters: scores from a candidate's projects, a practical test and an interview, with an interview guide. The first project started on the method from its first commit. | 318, in its private repository |
+| [HarnessCraft](https://github.com/Mihai-Streanga/HarnessCraft-public) | A prototype that assesses skill in working with AI, built to help recruiters: scores from a candidate's projects, a practical test and an interview, with an interview guide. The first project started on the method from its first commit. | 281, plus 3 skipped with the reason: two need private files, one is the author's own case |
 | [The method](docs/ARCHITECTURE.md#5-the-seventh-project-a-method-that-improves-itself) | The method itself, run as a project: twelve versions, its own alignment, audits and toolkit, and the feedback loop that improves it | 267, in its private repository |
 
 Each product repository holds, at its root, the instructions Claude Code reads when it works
