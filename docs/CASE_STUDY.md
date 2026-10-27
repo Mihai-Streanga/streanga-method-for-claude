@@ -1,15 +1,24 @@
 # Case study: seven projects on one method
 
-Seven projects, built over six months. Five are products: a payroll verification suite, a
-job-search agent, a personal assistant, a dictation tool and a digital twin. The sixth,
-HarnessCraft, is a prototype that assesses skill in working with AI. The seventh is the method itself, run as a project under its
-own rules. The first product, SkyRoll, was built in
-claude.ai; the work then moved to Claude Code, and the method grew out of what the projects
-taught. Between 29 September and 8 October 2026 the first six were brought onto the method and
-then updated to version 2.0, current at the time. HarnessCraft, the newest project, started on
-version 2.1 from its first commit, on 10 October. They all move to version 3 next.
+Seven projects, built over six months, in two groups.
 
-This page shows what changed, with the numbers and how they were taken.
+**Six existing projects, brought onto the method.** Five are products: a payroll verification
+suite, a job-search agent, a personal assistant, a dictation tool and a digital twin. The sixth is
+the method itself, run as a project under its own rules. The first product, SkyRoll, was built in
+claude.ai; the work then moved to Claude Code, and the method grew out of what the projects
+taught. Between 29 September and 8 October 2026 these six were brought onto the method and then
+updated to version 2.0, current at the time.
+
+**One new project, on the method from its first commit.** HarnessCraft, a prototype that assesses
+skill in working with AI, was debated in claude.ai and set up on version 2.1 of the method on
+10 October. It is the first project that never had to be brought onto the method: it had on its
+first day what the others gained through alignment, and it is where the method shows its full
+value.
+
+All seven move to version 3 next. This page shows what changed, with the numbers and how they
+were taken: first for the projects brought onto the method, then for the one that started on it.
+
+# Part 1. Existing projects, brought onto the method
 
 ## Cost: the whole session, not only its start
 
@@ -49,14 +58,6 @@ Read from every session transcript of the first six projects, with the method's 
 In the five products, no session passed 300,000 after the ceiling; the two that did were in the
 method's own repository on 8 October, the day version 2.0 was completed.
 
-**Starting a new project costs one session.** The method's set-up for a new project has been run
-end to end in automated trials. Each run took one session of about forty requests and about
-US$3 at API list prices, and produced a ready project of 29 files in a single commit: working
-instructions, permissions, checks, measuring tools, commands and the files that carry the state
-of the work, with every rule checker clean. The first six projects reached the same point
-through alignment, over several sessions each. HarnessCraft started from that point: one set-up
-commit on 10 October, and its version 1.0 sixteen days later.
-
 ## Verification: an automated suite in every project
 
 | Project | Verification before the method | Automated tests today, private repository | Public repository |
@@ -66,8 +67,7 @@ commit on 10 October, and its version 1.0 sixteen days later.
 | Iris | a corpus of 52 recorded clips with an automatic verdict | 32, plus the corpus | 31 |
 | Mih.AI | no automated suite | 24 | 23 |
 | SkyRoll | 71 independent recalculations and numbered guards inside the engine, plus a regression fingerprint on reference files | 410 | 50, on the demonstration engine |
-| HarnessCraft | started on the method, with tests from its first feature, on its first day | 320 | 281, plus 3 skipped with the reason |
-| The method | no automated suite for its tools | 267, run before every commit | private; this repository is its public face |
+| The method | no automated suite for its tools | 273, run before every commit | private; this repository is its public face |
 
 **SkyRoll** was the first project, designed and built in claude.ai before the work moved to
 Claude Code. Its engine arrived in version control already working, and verification was built
@@ -188,6 +188,100 @@ method came first: 40 findings, each applied or decided by the author. The
 [architecture](ARCHITECTURE.md#5-the-seventh-project-a-method-that-improves-itself) shows the loop
 behind it.
 
+# Part 2. A new project: HarnessCraft, on the method from its first commit
+
+HarnessCraft assesses how a candidate works with AI, to help recruiters with a skill that is new
+to the job market. It reads a candidate's project from its version history against written rules,
+adds a structured interview and a practical test, and gives each part an equal share of the
+result, with an interview guide for the recruiter. The program calls no AI model: scores and
+questions come from written rules. Version 1.0 is a prototype, not yet calibrated on real
+candidates.
+
+It is the first project to go the method's whole way: an idea debated in claude.ai, a written
+brief, one set-up session, then building, auditing and reviewing on the method from the first
+day. Every figure below was taken with the method's own tools, from the project's own records.
+
+## From set-up to version 1.0 in sixteen days
+
+| When | What happened |
+|---|---|
+| 10 October 2026 | The idea debated in claude.ai, in project mode; the brief became the project's founding text. The same day, one set-up session on version 2.1 of the method and a single commit: instructions, permissions, checks, measuring tools, commands and the files that carry the state of the work. Tests came with the first feature. |
+| 16 October | A first full audit of the project, in the method's standard form. |
+| 16 to 21 October | Five more audits, each of what had changed since the one before, and four quality reviews, each compared with the last. |
+| 22 October | A review in the chat, holding the built project against the idea it started from. |
+| 26 October | Version 1.0, declared by the author: 414 commits and 318 tests. |
+| 27 October | A public copy, derived from the private repository and checked on a fresh clone. |
+
+**Starting a project costs one session.** The method's set-up has also been run end to end in
+automated trials: each run took one session of about forty requests and about US$3 at API list
+prices, and produced a ready project of 29 files in a single commit, with every rule checker
+clean. The projects in Part 1 reached the same point through alignment, over several sessions
+each; HarnessCraft started from it.
+
+## Cost: lean from the first session
+
+| | HarnessCraft |
+|---|---:|
+| Sessions, from set-up to today | 69 |
+| Median first request of a session | 12,575 tokens |
+| Share of all processed tokens carried by the start of each request | about 10% |
+
+Read from every HarnessCraft session transcript with the method's session tool. The median
+start sits at the low end of what the projects in Part 1 reached only after alignment, and the
+start is about a tenth of what the sessions processed, against 15–20% in those projects: the
+work itself takes the rest.
+
+## Verification from the first feature
+
+| | HarnessCraft |
+|---|---|
+| Automated tests, private repository | 320, all passing (318 at version 1.0) |
+| Public repository | 281, plus 3 skipped with the reason |
+| Continuous integration | the suite runs on GitHub on every push that changes code |
+
+Tests were written with the code from the first day. Of the first 83 commits that added or fixed
+product code, 74 came with tests; the project then added a commit check that refuses a
+change to the product without a test, unless the message says why. The check went back to the
+method, and every new project now starts with it.
+
+## Audited and reviewed while it was built
+
+**Six audits in six days.** One full audit on 16 October, then five audits of each change since
+the previous one, up to 21 October. The audits end with their points sorted: fixed mechanically,
+decided by the author, or left with a reason. On 21 October a single round of decisions by the
+author settled 44 points, and the next audit confirmed them applied in the code.
+
+**Four quality reviews in three days.** From 19 to 21 October the code was read against the
+method's references, each review compared with the one before. The second found four defects in
+what happens when something fails, among them the interview guide and the test sheet written
+straight over the old files, with no protection against an interrupted write, and two saves that
+could reach the disk in the wrong order while the screen said "saved". The third review found all
+four closed; the fourth found no new ones. From the third review on, every rule breach reported
+in one review was closed by the next.
+
+**Rules written before the result.** The rules for each calibration round were fixed before it
+ran, and they held after it. A code-quality measure matched the author's blind ranking on 8 of
+12 projects, against a threshold of 10 set in advance; it stays in the report as information,
+outside the score, and the threshold stayed where it was.
+
+## Held against its starting idea
+
+Before version 1.0, the project was reviewed in the chat's review mode, claim by claim against
+the brief it started from. Each claim got a verdict with its evidence: held, held in a narrower
+form, changed, or dropped. Five improvements came out of the review, and all five were made before
+the version was tagged. One of them sets how the project speaks of its own result: its project sheet matches the
+author's blind ranking at the threshold, 10 of 12 projects, with a single rater, and every public
+text says exactly that.
+
+## What travelled back to the method
+
+HarnessCraft's notes to the method, numbered HC1 to HC56, were worked through for version 3,
+along with the commit check above. Its first claude.ai conversation was also the method's second
+real test of the chat side, and confirmed the fixes made after the first. The new project and the
+method improved each other in the same weeks.
+
+# Across the seven projects
+
 ## Three decisions on record
 
 How the method closes work that could otherwise run forever.
@@ -208,9 +302,9 @@ How the method closes work that could otherwise run forever.
 ## Scale
 
 The operating manual for Claude Code is 2,826 lines; the chat side is a full project prompt of
-45 rules in three modes. The method's own tooling is covered by 267 tests, all passing, and its
-repository has 684 commits. The seven projects together have 2,082 commits: 1,398 in the other
-six projects and 684 in the method. Figures read on 27 October 2026.
+45 rules in three modes. The method's own tooling is covered by 273 tests, all passing, and its
+repository has 694 commits. The seven projects together have 2,108 commits: 1,414 in the other
+six projects, 433 of them in HarnessCraft, and 694 in the method. Figures read on 27 October 2026.
 
 ## About the measurements
 
